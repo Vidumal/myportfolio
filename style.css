@@ -290,3 +290,11 @@ section.visible {
     transform: rotate(360deg);
   }
 }
+.project-card h3 a:hover {
+  color: #ffffff; 
+  text-decoration: none; 
+}
+.project-card h3 a {
+  color: #ffffff; 
+  text-decoration: none; 
+}
