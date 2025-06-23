@@ -1,89 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Book Store Management System</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store Management System</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Loading Animation -->
-  <div class="loader">
-    <div class="spinner"></div>
-  </div>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="logo"><!-- need a title--></div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <!-- Project Description Section -->
-  <section id="project-description" class="project-description">
-    <div class="project-content">
-      <h2>Online Bookstore Management System</h2>
-      <p>
-        The Online Bookstore Management System is a web-based application built using Spring Boot and Java 17 as part of our Object-Oriented Programming coursework at SLIIT. The aim of this project was to build a complete bookstore platform that allows users to register, explore books, view offers, make payments, and buy stationery or tickets—all without using a traditional database.
-
-Instead of SQL, we used file handling to persist data, offering a clear demonstration of core OOP principles, Java I/O, and MVC architecture in a real-world web application.
-      </p>
-      <br>
-      <h3>🛠 Technologies Used</h3>
-      <ul>
-        <li>Java 17</li>
-        <li>Spring Boot</li>
-        <li>Apache Tomcat 9.0.102</li>
-        <li>JSP (JavaServer Pages)</li>
-        <li>File I/O (Text Files as Database)</li>
-        <li>Spring Initializr with Webapp dependencies</li>
-      </ul>
-
-      <br>
-      <h3>🧩 Project Structure & Purpose</h3>
-      <p>
-        We followed the MVC (Model-View-Controller) pattern to structure the application into logical, manageable components.
-      </p>
-      <h3>📁 Controllers (src/main/java/.../controller)</h3>
-      These files handle user interactions and route requests to the correct services:
-      <p>
-        This project demonstrates proficiency in Java, Spring Boot, and RESTful API development, with a focus on creating a scalable and efficient web application. Check out the source code on <a href="https://github.com/Vidumal/Online-BookStore-Management-System" target="_blank">GitHub</a>.
-      </p>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="spinner"></div>
     </div>
-  </section>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"><!-- need a title--></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Project Description Section -->
+    <section id="project-description" class="project-description">
+        <div class="project-content">
+            <h2>Online Bookstore Management System</h2>
+            <p>
+                The Online Bookstore Management System is a web-based application built using Spring Boot and Java 17 as
+                part of our Object-Oriented Programming coursework at SLIIT. The aim of this project was to build a
+                complete bookstore platform that allows users to register, explore books, view offers, make payments,
+                and buy stationery or tickets—all without using a traditional database.
+
+                Instead of SQL, we used file handling to persist data, offering a clear demonstration of core OOP
+                principles, Java I/O, and MVC architecture in a real-world web application.
+            </p>
+            <br>
+            <h3>🛠 Technologies Used</h3>
+            <ul>
+                <li>Java 17</li>
+                <li>Spring Boot</li>
+                <li>Apache Tomcat 9.0.102</li>
+                <li>JSP (JavaServer Pages)</li>
+                <li>File I/O (Text Files as Database)</li>
+                <li>Spring Initializr with Webapp dependencies</li>
+            </ul>
+
+            <br>
+            <h3>🧩 Project Structure & Purpose</h3>
+            <p>
+                We followed the MVC (Model-View-Controller) pattern to structure the application into logical,
+                manageable components.
+            </p>
+            <h3>📁 Controllers (src/main/java/.../controller)</h3>
+            These files handle user interactions and route requests to the correct services:
+            <li>HomeController - Handles the homepage and navigation.</li>
+            <li>OfferController - Manages promotional offers and discounts.</li>
+            <li>PaymentController - Processes payments and transactions.</li>
+            <li>StationaryController - Displays stationery items.</li>
+            <li>TicketController - Manages event or transport tickets.</li>
+            <li>UserController - Manages user registration and login.</li>
+            
+            <h3>📁 Models (src/main/java/.../model)</h3>
+            <p>These files define the structure of data objects used throughout the system:</p>
+            <li>Book, Offer, Payment, Stationary, Ticket, User - Each class represents a real-world entity with relevant attributes.</li>
+
+            <h3>📁 Services (src/main/java/.../service)</h3>
+            <p>These contain the business logic and file-handling methods:</p>
+            <li>Each service (e.g., BookService, UserService) reads from and writes to .txt files stored in the data folder.</li>
+
+            <h3>📂 Data Storage</h3>
+            <li>/data/ - Stores .txt files for all data (e.g., books.txt, users.txt, offers.txt) acting as a lightweight file-based database.</li>
+            <li>/data/image/ - Stores image files (e.g., book covers, product images).</li>
+            <p>We created a Constants file to manage file paths centrally because Spring Boot blocks access to local file system paths for security reasons. This helps us access images reliably from within the application.</p>
+            
+            <h3>🖼 JSP & Web Interface</h3>
+            All front-end views are stored in:
+            <li>/webapp/WEB-INF/jsp/</li>
+            <li>These JSP files are rendered by the controllers and dynamically display data from the .txt files.</li>
+            <li>Examples: home.jsp, books.jsp, login.jsp, offers.jsp, etc.</li>
+            
+            <p>
+                This project demonstrates proficiency in Java, Spring Boot, and RESTful API development, with a focus on
+                creating a scalable and efficient web application. Check out the source code on <a
+                    href="https://github.com/Vidumal/Online-BookStore-Management-System" target="_blank">GitHub</a>.
+            </p>
+        </div>
+    </section>
 
 
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/punsithvidumal/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/Vidumal" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/punsithvidumal/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Vidumal" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 NoxBot. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 NoxBot. All rights reserved.</p>
+    </footer>
 
-  <script src="/script.js"></script>
-  </body>
-  </html>
+    <script src="/script.js"></script>
+</body>
+
+</html>
