@@ -348,3 +348,61 @@ section.visible {
   text-decoration: underline;
   color: #0056b3; /* Adjust hover color */
 }
+.skill-details {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.skill-details h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.skill-details h2 {
+  font-size: 1.8em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.skill-details p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.skill-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.skill-details li {
+  margin-bottom: 10px;
+}
+
+.skill-details .btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.skill-details .btn:hover {
+  background-color: #0056b3;
+}
+.skill-details {
+  background-color: yellow;
+  color: black;
+}
+
