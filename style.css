@@ -348,3 +348,94 @@ section.visible {
   text-decoration: underline;
   color: #0056b3; /* Adjust hover color */
 }
+/* Skill Details Section */
+.skill-details {
+  padding: 50px 10%;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #1e1e2f; /* dark background */
+  color: #ffffff;            /* white text for contrast */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.skill-details h1 {
+  color: #00bcd4;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skill-details h2 {
+  color: #00bcd4;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skill-details p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skill-details ul {
+  list-style: disc inside;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.skill-details li {
+  margin-bottom: 10px;
+}
+
+.skill-details a.btn {
+  display: inline-block;
+  background-color: #00bcd4;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.skill-details a.btn:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+}
+
+.skill-details img {
+  max-width: 200px;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-details img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+@media (max-width: 600px) {
+  .skill-details {
+    padding: 30px 5%;
+  }
+  
+  .skill-details h1 {
+    font-size: 1.5rem;
+  }
+  
+  .skill-details h2 {
+    font-size: 1.25rem;
+  }
+}
+
+
+
